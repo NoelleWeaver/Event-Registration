@@ -2,32 +2,46 @@ var express = require('express')
 var app = express()
 const fs = require('fs');
 const PORT = 5000
+const path = require('path');
+const bodyParser = require('body-parser');
 
 app.set('view engine', 'ejs')
 app.use(express.urlencoded({ extended: true }));
 app.use('/public', express.static("public"))
 
 
-app.post('/submit', (req, res) => {
-    const userData = req.body;
-  // Read existing JSON file or create an empty array if it doesn't exist
-    let jsonData = [];
-    try {
-    const rawData = fs.readFileSync('data.json');
-    jsonData = JSON.parse(rawData);
-    } catch (err) {
-        // Ignore error if file doesn't exist
+app.post('/events', (req, res) => {
+    const { event, name, email } = req.body;
+
+    if (!event || !name || !email) {
+        return res.status(400).json({ success: false, message: 'Missing required fields' });
     }
 
-    // Add new user data to the array
-    jsonData.push(userData);
+    const attendeeData = {
+        eventName: event,
+        Name: name,
+        Email: email
+    };
 
-    // Write updated data to the JSON file
-    fs.writeFileSync('data.json', JSON.stringify(jsonData));
+    const filePath = path.join(__dirname, 'data', 'data.json');
 
-    res.send('Data saved successfully!');
+    fs.readFile(filePath, 'utf8', (err, fileContent) => {
+
+        let jsonData = [];
+
+        try {
+            jsonData = JSON.parse(fileContent);
+        } catch (e) {
+
+        }
+        jsonData.push(attendeeData);
+
+        // Write updated data back to file
+        fs.writeFile(filePath, JSON.stringify(jsonData, null, 2), 'utf8', (err) => {
+            res.redirect('/events')
+        });
+    });
 });
-
 app.get('/events', function(req,res){
     res.render('events')
 })

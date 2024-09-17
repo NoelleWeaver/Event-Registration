@@ -7,11 +7,12 @@
     <title>Events</title>
 </head>
 <body>
-    <form action="/submit" method="post">
+    <h1>Events</h1>
+    <form action="/events" method="post">
         <div>
-            <input placeholder="Name" type="text"><br>
-            <input placeholder="email@gmail.com" type="email"><br>
-            <input placeholder="Event Selected" type=""><br>
+            <input placeholder="Name" id="name" name="name" type="text"><br>
+            <input placeholder="email@gmail.com" name="email" id="email" type="email"><br>
+            <input placeholder="Event Selected" id="event" name="event" type="text"><br>
             <button type="submit">Submit</button>
         </div>
     </form>

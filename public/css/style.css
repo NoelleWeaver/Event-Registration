@@ -1,3 +1,12 @@
+body{
+    display: flex;
+    justify-content: center;
+}
+
+h1{
+    position: absolute;
+}
+
 form{
     width: 400px;
     height: 500px;
@@ -6,7 +15,7 @@ form{
     display: flex;
     justify-content: center;
     align-items: center;
-
+    margin: 10px;
 }
 
 form div input{
@@ -15,9 +24,10 @@ form div input{
     margin-top: 0;
     width: 200px;
     height: 55px;
-    border-radius: 20px;
-    text-align: center;
+    text-align: justify;
     border: none;
+    background-color: transparent;
+    border-bottom: 2px solid black;
 }
 
 input::placeholder{
