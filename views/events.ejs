@@ -8,7 +8,8 @@
 </head>
 <body>
     <h1>Events</h1>
-    <form action="/events" method="post">
+    <form class="form" action="/events" method="post">
+        <h2>Register</h2>
         <div>
             <input placeholder="Name" id="name" name="name" type="text"><br>
             <input placeholder="email@gmail.com" name="email" id="email" type="email"><br>
@@ -16,5 +17,19 @@
             <button type="submit">Submit</button>
         </div>
     </form>
+
+    <ul>
+        <% tasks.forEach(task => { %>
+            <li>
+                <div class="task">
+                    <div class="task-details">
+                        <h3 class="task-name"><%= task.name %></h3>
+                        <h5><%= task.date %></h5>
+                        <p class="task-desc"><%= task.description %></p>
+                    </div>
+                </div>
+            </li>
+        <% }); %>
+    </ul>
 </body>
 </html>

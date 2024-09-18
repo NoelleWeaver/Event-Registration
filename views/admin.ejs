@@ -7,6 +7,38 @@
     <title>Admin</title>
 </head>
 <body>
+    <h1>Task Manager</h1>
+    <div class="form_admin">
+        <form action="/tasks" method="POST">
+            <fieldset>
+                <legend>Add New Task</legend>
+                <input type="text" name="name" placeholder="New task name" required>
+                <input type="text" name="description" placeholder="New task description" required>
+                <input type="date" name="date" required>
+                <button type="submit">Add Task</button>
+            </fieldset>         
+        </form>
+    </div>
     
+
+    <ul>
+        <% tasks.forEach(task => { %>
+            <li>
+                <div class="task">
+                    <div class="task-details">
+                        <h3 class="task-name"><%= task.name %></h3>
+                        <h5><%= task.date %></h5>
+                        <p class="task-desc"><%= task.description %></p>
+                    </div>
+                    <div class="task-buttons">
+                        <button class="edit-button"><a href="/tasks/<%= task.id %>/edit">Edit</a></button>
+                        <form action="/tasks/<%= task.id %>/delete" method="POST" style="display:inline;">
+                            <button class="delete-button" type="submit">Delete</button>
+                        </form>
+                    </div>
+                </div>
+            </li>
+        <% }); %>
+    </ul>
 </body>
 </html>

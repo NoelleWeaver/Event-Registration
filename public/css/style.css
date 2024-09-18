@@ -1,44 +1,80 @@
-body{
-    display: flex;
-    justify-content: center;
-}
+
+@import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
 
 h1{
     position: absolute;
+    left: 45%;
+    top: 0;
 }
 
-form{
-    width: 400px;
+@font-face {
+    font-family: poppins;
+    src: url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
+}
+
+body{ 
+    font-family: poppins;
+    font-weight:400;
+}
+
+.form{
+    top: 0;
+    margin-top: 15%;
+    margin-left: 5%;
+    width: 45%;
     height: 500px;
-    border-radius: 3%;
-    background-color: rgb(188, 188, 188);
+    background-color: rgb(238, 238, 238);
     display: flex;
     justify-content: center;
     align-items: center;
-    margin: 10px;
 }
 
-form div input{
-    margin: 30%;
-    margin-left: 0;
-    margin-top: 0;
-    width: 200px;
+.form div input{
+    left: -15%;
+    margin: 3%;
+    width: 400px;
     height: 55px;
     text-align: justify;
+    position: relative;
     border: none;
     background-color: transparent;
     border-bottom: 2px solid black;
 }
 
 input::placeholder{
-    color: blue;
+    color: rgb(131, 131, 131);
+    font-family: poppins;
 }
 
-form div button{
+.form h2{
+    top: -40%;
+    left: 30%;
+    position: relative;
+}
+
+.form div button{
     width: 100px;
     height: 40px;
     background-color: white;
-    border-radius: 10px;
     border: none;
-    color: blue;
+    color: rgb(154, 154, 154);
 }
+
+.task {
+    width: 45%;
+    margin-left: 50%;
+    margin-top: 0%;
+}
+
+ul {
+    list-style-type: none;
+    margin-bottom: 10%;
+    margin-top: -40%;
+}
+
+.task-details{
+    background-color: rgb(238, 238, 238);
+    padding: 20px;
+    margin: 10%;
+}
+
