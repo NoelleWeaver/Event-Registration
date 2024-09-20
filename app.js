@@ -25,7 +25,7 @@ app.post('/events', (req, res) => {
         Email: email
     };
 
-    const filePath = path.join(__dirname, 'data', 'data.json');
+    const filePath = path.join(__dirname, 'data', 'register.json');
 
     fs.readFile(filePath, 'utf8', (err, fileContent) => {
 
@@ -59,11 +59,6 @@ const saveTasks = (tasks) => {
 
 //Routes
 
-//GET: Shows all tasks
-app.get('/', (req, res) => {
-    const tasks = getTasks();
-    res.render('admin', {tasks});
-});
 
 //POST: Create a new task
 app.post('/tasks', (req, res) => {
@@ -105,7 +100,7 @@ app.post('/tasks/:id/delete', (req,res) => {
     res.redirect('/');
 });
 
-app.get('/events', function(req,res){
+app.get('/', function(req,res){
     let tasks = getTasks();
     res.render('events', { tasks })
 })

@@ -3,15 +3,15 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" type="text/css" href="/public/css/style.css">
+    <link rel="stylesheet" type="text/css" href="/public/css/style_update.css">
     <title>Edit Task</title>
 </head>
 <body>
     <h1>Edit Task</h1>
     <form action="/tasks/<%= task.id %>" method="POST">
-        <input type="text" name="name" value="<%= task.name %>" required>
+        <input type="text" name="name" value="<%= task.name %>" placeholder="Name" required>
         <input type="date" name="date" value="<%= task.date %>" required></br>
-        <textarea cols="40" rows="10" name="description" required><%= task.description %></textarea>
+        <textarea cols="40" rows="10" name="description" placeholder="Description" required><%= task.description %></textarea>
         <button type="submit">Update Task</button>
     </form>
     <a href="/">Back to list</a>

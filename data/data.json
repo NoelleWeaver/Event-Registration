@@ -2,7 +2,7 @@
   {
     "id": 2,
     "name": "Quo Lux",
-    "date": "11/19/2023",
+    "date": "2024-09-20",
     "description": "Maecenas leo odio, condimentum id, luctus nec, molestie sed, justo. Pellentesque viverra pede ac diam. Cras pellentesque volutpat dui. Maecenas tristique, est et tempus semper, est quam pharetra magna, ac consequat metus sapien ut nunc. Vestibulum ante ipsum primis in faucibus orci luctus et ultrices posuere cubilia Curae; Mauris viverra diam vitae quam. Suspendisse potenti. Nullam porttitor lacus at turpis. Donec posuere metus vitae ipsum. Aliquam non mauris."
   },
   {
@@ -78,12 +78,6 @@
     "description": "Morbi a ipsum. Integer a nibh. In quis justo. Maecenas rhoncus aliquam lacus. Morbi quis tortor id nulla ultrices aliquet. Maecenas leo odio, condimentum id, luctus nec, molestie sed, justo."
   },
   {
-    "id": 15,
-    "name": "Namfix",
-    "date": "3/27/2024",
-    "description": "Vestibulum rutrum rutrum neque. Aenean auctor gravida sem. Praesent id massa id nisl venenatis lacinia."
-  },
-  {
     "id": 16,
     "name": "Fix San",
     "date": "2/14/2024",
@@ -112,11 +106,5 @@
     "name": "Flexidy",
     "date": "8/8/2024",
     "description": "Sed sagittis. Nam congue, risus semper porta volutpat, quam pede lobortis ligula, sit amet eleifend pede libero quis orci. Nullam molestie nibh in lectus. Pellentesque at nulla. Suspendisse potenti. Cras in purus eu magna vulputate luctus."
-  },
-  {
-    "id": 22,
-    "name": "Noelle Weaver",
-    "date": "2024-09-17",
-    "description": "h"
   }
 ]
